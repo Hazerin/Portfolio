@@ -13,6 +13,10 @@ h1, h2, h3, h4, h5, h6, span {
     line-height: 1.25;
 }
 
+h1 {
+    font-size: 36px;
+}
+
 p {
     line-height: 1.5;
     font-size: 16px;
@@ -27,7 +31,17 @@ li {
 }
 
 .flex-1 {
-    flex: 1;
+    flex: 1; /* flex-grow = 1 flex-shrink = 1 flex-basis = 0, vedi appunti, funziona in quanto è in un contenitore flex*/
+}
+
+.row {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.text--purple {
+    color: #6030b1;
 }
 
 /* Navigation bar */
@@ -80,9 +94,56 @@ nav {
     flex-direction: column;
 }
 
+.about-me__info {
+    display: flex;  /* di per sè non fa nulla, ma serve per usare il trucco del flex: 1 in un figlio: about-me__img--container */
+    flex-direction: column;
+}
+
+.about-me__img--container {
+    flex 1; /* funziona solo se è in un contenitore flex */
+}
+
 .about-me__info--container {
     display: flex;
     flex-direction: column; /* per usare le proprietà flex mantenendo l'ordinamento a colonna */
     justify-content: center;
     align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align:center;
 }
+
+.about-me__picture--mask { /* imposto la dimensione del contenitore con la foto */
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;   /* arrotonda i bordi creando cosi un cerchio */
+    overflow: hidden;   /* nasconde lo sbordamento dell'immagine che contiene questo elemento */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5); /* spostamento orizzontale, verticale dell'ombra, raggio di sfumatura, colore */
+    margin-bottom: 28px;
+}
+
+.about-me__picture {
+    height: 100%;         /* imposto la dimensione della foto rispetto al contenitore */
+    width: 100%;          /* meno rischio di compenetrazione se imposto entrambi i parametri */
+
+    /* Miglioramenti */
+    transform: scale(1.1); /* ingrandita immagine di 1.1 volte */
+    padding-top: 8px;
+}
+
+.about-me__info--title {
+    margin-bottom: 16px;
+}
+
+.about-me__info--para {
+    font-size: 20px;
+    margin-bottom: 28px;
+}
+
+.about-me__link {
+    font-size: 30px;
+    color: #242424;
+    text-decoration: none;
+    padding: 0 16px;
+}
+
