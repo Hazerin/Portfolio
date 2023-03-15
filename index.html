@@ -10,34 +10,44 @@
   <body>
     <section id="about-me">
       <nav>
-        <div class="personal_logo">Hazerin</div>
+        <div class="personal__logo">Hazerin</div>
         <ul class="nav__link--list">
-        <!--con questo formato: nav__link--list i doppi tratti bassi stanno per indicare un elemento del blocco il cui nome è a sinistra (nav) e i due trattini denotano un modificatore dell'elemento (in questo caso link).-->
-        <li>
-          <a
-            href=""
-            class="nav__link--anchor
-            link__hover-effect
-            link__hover-effect--black
-            ">Languages</a>
-        </li>
-        <li>
+          <!--con questo formato: nav__link--list i doppi tratti bassi stanno per indicare un elemento del blocco il cui nome è a sinistra (nav) e i due trattini denotano un modificatore dell'elemento (in questo caso link).-->
+          <li>
             <a
               href=""
-              class="nav__link--anchor
-              link__hover-effect
-              link__hover-effect--black
-              ">Languages</a>
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              >Languages</a
+            >
           </li>
           <li>
             <a
               href=""
-              class="nav__link--anchor
-              nav__link--ancor-primary
-              ">Contacts</a>
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              >Languages</a
+            >
+          </li>
+          <li>
+            <a href="" class="nav__link--anchor nav__link--anchor-primary"
+              >Contacts</a
+            >
           </li>
         </ul>
       </nav>
+      <div class="flex flex-1">
+        <div class="about-me__info row">
+          <div class="about-me__info--container">
+            <figure class="about-me__picture--mask">
+              <img src="./assets/Me.PNG" alt="Picture of me!" />
+            </figure>
+            <h1 class="about-me__info--title">
+              Salve! Sono <span class="text--purple">Hazerin</span>
+            </h1>
+            <p class="about-me">Sono uno studente di <strong class="text--purple"> informatica dell'Università di Parma</strong> e i principali campi di mio interesse sono lo sviluppo web, software e le intelligenze artficiali.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
   </body>
 </html>
