@@ -503,7 +503,7 @@ footer {
         display: none;
     }
 
-    .project__description__links {
+    .project__description--links {
         display: flex;
         justify-content: center;
     }
